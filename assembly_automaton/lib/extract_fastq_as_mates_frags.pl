@@ -8,6 +8,7 @@ use strict;
 
 MAIN : {
 `CURRENTPATH=\$PWD`;
+# Needs changing to general path for user with different setup
 `COMMON_BIN=/usr/local/common`;
 	
 #input variable declarations

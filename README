@@ -12,8 +12,11 @@
 
 Deposit the entire contents of the NeatFreq distributable bundle in your desired install location. This bundle includes additional 1st and 3rd party tools available by open source license, expected in the NeatFreq install's /lib/ directory. 
 
+If you do not have CLC Bio Assembly Cell, a proprietary piece of software from a commercial company, you can get a quote from here.. http://www.clcbio.com/products/clc-assembly-cell/
+
 (Optional) If you would like to remove the requirement to point to this area using the '-N' flag on every execution, update the global variable "$NEATFREQ_INSTALL" at the top of scripts NeatFreq_preprocess.pl, NeatFreq.pl, NeatFreq_postprocess_random.pl and NeatFreq_auto.pl.
 
+You may also need to remove the hard references to software install directories in many other scripts, including `total_stat.pl`,`configure_automaton_fastq_for_neatfreq.pl` and `extract_fastq_as_mates_frags.pl`. Change these to the place that you installed the relevant software.
 
 
 # 2.0 - PREPROCESSING ############################################

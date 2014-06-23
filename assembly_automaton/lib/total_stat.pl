@@ -46,6 +46,10 @@ my @prev_time;
 my $time_bool=0;
 
 ## Software Locations ##
+
+
+# Needs changing to general path for user with different setup
+# -------------------------------------------------------------
 my $LICENSE_DIR           = "/usr/local/packages/clc-ngs-cell/license.properties";   
 my $SAMTOOLS_DIR;
 #update 8/18
@@ -65,6 +69,7 @@ my $assembly_info         = "/usr/local/packages/clc-ngs-cell/assembly_info";
 my $assembly_table        = "/usr/local/packages/clc-ngs-cell/assembly_table";
 my $sequence_info         = "/usr/local/packages/clc-ngs-cell/sequence_info";
 my $split_sequences       = "/usr/local/packages/clc-ngs-cell/split_sequences";
+# ---------------------------------------------------------------------------------
 
 # STANDARD OPTIONS
 #
@@ -608,6 +613,9 @@ if(-e "./samtools.err"){
 
 
 #cutoff of contig length
+
+# Needs changing to general path for user with different setup
+#---------------------------------------------------------------
 sub runANNOTcheck{
 	$contigFile = shift;
 	
@@ -628,13 +636,14 @@ sub runANNOTcheck{
 	
 	return "annotation_ready.ctg.fasta";
 }
-
+# ---------------------------------------------------------------
 
 #cutoff of contig length
 sub runLENCUTOFF{
 	$contigFile = shift;
 	$lenCutoff = shift;
-	
+
+## Needs changing to general path for user with different setup	
 	my $SIZEFASTA_LOCATION = "/usr/local/devel/BCIS/assembly/tools";
 	my $EXTRACTFASTA_LOCATION = "/usr/local/devel/SE/bin";
 	
@@ -2142,6 +2151,7 @@ sub seqInfo{
 }
 			
 ################################################################################################################################################################################################################################################
+# Needs changing to general path for user with different setup
 sub ZeroXAnalysis {		
 # ZeroXAnalysis($contigFile,$prefix,$zero_x_ref);
 	my $contigFile   = shift;

@@ -49,6 +49,7 @@ MAIN : {
 	runsys("cat $infrg > all.Z.fastq");
 	runsys("cat $inprs >> all.Z.fastq");
 	if ($offset == 0){
+		# Needs changing to general path for user with different setup
 		runsys("/usr/local/bin/fastx_renamer -n COUNT -i all.Z.fastq -o all.COUNT.fastq");
 	}else{
 		runsys("/usr/local/bin/fastx_renamer -n COUNT -Q $offset -i all.Z.fastq -o all.COUNT.fastq");
